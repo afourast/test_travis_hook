@@ -11,8 +11,6 @@ before_install: # Use this to prepare the system to install prerequisites or dep
   # Define some config vars
 install: # Use this to install any prerequisites or dependencies necessary to run your build
   # Create workspace
-  - git clone https://github.com/afourast/test_travis_hook.git
-
 before_script: # Use this to prepare your build for testing e.g. copy database configurations, environment variables, etc.
   
 script: # All commands must exit with code 0 on success. Anything else is considered failure.
