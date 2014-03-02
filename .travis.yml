@@ -1,0 +1,20 @@
+language:
+  - cpp
+compiler:
+  - gcc
+notifications:
+  email:
+    recipients: # notify committer and commit author only
+    on_success: change #[always|never|change] # default: change
+    on_failure: change #[always|never|change] # default: always
+before_install: # Use this to prepare the system to install prerequisites or dependencies
+  # Define some config vars
+install: # Use this to install any prerequisites or dependencies necessary to run your build
+  # Create workspace
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - git clone git@github.com:afourast/dummy.git
+
+before_script: # Use this to prepare your build for testing e.g. copy database configurations, environment variables, etc.
+  
+script: # All commands must exit with code 0 on success. Anything else is considered failure.
+  - g++ dummy.dummy.cpp
